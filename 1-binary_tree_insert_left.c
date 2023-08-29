@@ -21,7 +21,7 @@ return (NULL);
 new->parent = parent;
 new->n = value;
 new->left = parent->left;
-new->right = NULL;
 parent->left = new;
-return (parent->left);
+
+return (new);
 }
