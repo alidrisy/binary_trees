@@ -21,12 +21,12 @@ return (NULL);
 new->n = value;
 new->parent = parent;
 new->right = NULL;
-if (parent->left)
+if (parent->left != NULL)
 new->left = parent->left;
 else
 new->left = NULL;
 
 parent->left = new;
-
-return (new);
+free(new);
+return (parent->left);
 }
