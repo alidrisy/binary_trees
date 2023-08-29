@@ -17,7 +17,7 @@ int x, y, i, n;
 if (tree == NULL)
 return (0);
 
-if (!tree->left && !tree->right)
+if (!tree->left || !tree->right)
 return (0);
 
 x = tree_height(tree->left);
