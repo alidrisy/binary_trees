@@ -12,22 +12,19 @@ size_t tree_height(const binary_tree_t *tree);
 
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
-int x, y, i, n;
+int i, n;
 
 if (tree == NULL)
 return (0);
 
-if (!tree->left || !tree->right)
-return (0);
-
-x = tree_height(tree->left);
-y = tree_height(tree->right);
+if (tree_height(tree->left) == tree_height(tree->right))
+{
 i = binary_tree_size(tree->left);
 n = binary_tree_size(tree->right);
 
-if ((x == y)&& (n == i))
+if (n == i)
 return (1);
-
+}
 return (0);
 }
 
