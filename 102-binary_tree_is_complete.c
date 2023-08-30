@@ -42,8 +42,10 @@ return (tree_is_complete(tree->left, size, 2 * index + 1) &&
 
 int binary_tree_is_complete(const binary_tree_t *tree)
 {
-
 int x = tree_size(tree);
+
+if (tree == NULL)
+return (0);
 
 if (tree_is_complete(tree, x, 0))
 return (1);
