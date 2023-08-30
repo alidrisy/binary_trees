@@ -14,6 +14,9 @@ if (node == NULL)
 return (NULL);
 
 ne = node->parent;
+if (ne == NULL)
+return (NULL);
+
 new = ne->parent;
 if (!new || new->left == NULL || new->right == NULL)
 return (NULL);
