@@ -53,20 +53,5 @@ return (NULL);
 
 bst_t *bst_insert(bst_t **tree, int value)
 {
-bst_t *new = NULL;
-
-if (*tree == NULL)
-{
-new = b_insert(tree, value);
-}
-
-if ((*tree)->n > value)
-{
-new = b_insert(&(*tree)->left, value);
-}
-if ((*tree)->n < value)
-{
-new = b_insert(&(*tree)->right, value);
-}
-return (new);
+return (b_insert(tree, value));
 }
